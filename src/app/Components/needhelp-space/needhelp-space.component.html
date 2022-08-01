@@ -1,0 +1,68 @@
+<div id="needHelp-space-page">
+  <div class="logo-wrap-banner">
+    <img src="../assets/logo.png">
+  </div>
+  <button id="close" mat-button (click)="close()">יציאה</button>
+  <!-- <div class="buttons-wrap"> -->
+  <!-- <button mat-button (click)="show()"  >צפייה במערכת השעות</button> -->
+  <!-- <button mat-button (click)="update()" >צפה בפרטים אישיים</button> -->
+  <!-- <button mat-button  (click)="go()"> התנתק מהאתר</button> -->
+  <!-- <button mat-button  (click)="add()"> הוסף בקשת עזרה</button> -->
+  <!-- <button  mat-button (click)="up()"> מחק  התנדבות</button> -->
+  <!-- </div> -->
+
+  <div class="buttons-wrap">
+    <h1>שלום {{us.firstName+us.lastName}}</h1>
+    <button mat-button (click)="ghow()">צפייה במתנדבים ששובצו</button>
+    <table *ngIf="a">
+      <tr>
+        <th> שם מתנדב </th>
+        <th> סוג התנדבות עזרה </th>
+        <th> משמרת </th>
+        <th>טלפון המתנדב</th>
+      </tr>
+
+      <tr *ngFor="let i of listRealvolonteing">
+        <td>{{i.volunteerCode.firstName +i.volunteerCode.lastName }}</td>
+        <td>{{i.TypeOfVolunteeringCode.nameTypeOfVolunteering}}</td>
+        <td>{{i.volunteerTimeCode.nameVolunteerTime}}</td>
+        <td>{{i.volunteerCode.phon}}</td>
+      </tr>
+    </table>
+    <button mat-button (click)="show()">צפה בפרטיך האישיים</button>
+    <table *ngIf="b">
+      <tr>
+        <th>שם</th>
+        <th>משפחה</th>
+        <th>תאריך לידה</th>
+        <th>מין</th>
+        <th>עיר</th>
+        <th>טלפון</th>
+        <th>סוג משתמש</th>
+        <th>קהילה</th>
+        
+      </tr>
+      <tr>
+       <td>{{user.firstName}}</td>
+       <td>{{user.lastName}}</td>
+       <td>{{user.dateOfBirth| date}}</td>
+       <td>{{user.gender}}</td>
+       <td>{{user.address}}</td>
+       <td>{{user.phon}}</td>
+       <td>{{user.userType.nameUserType}}</td>
+       <td>{{user.idGroup.nameCommunities}}</td>
+       
+     </tr>
+     
+     </table>
+    <button id="a" *ngIf="b" mat-button (click)="upd()" > עדכן</button>
+
+    <!-- <button mat-button (click)="go()" >התנתק מהאתר</button> -->
+    <button mat-button (click)="add()">הוסף בקשת עזרה</button>
+    <button mat-button (click)="up()"> מחק בקשת עזרה</button>
+
+
+
+   
+  </div>
+</div>

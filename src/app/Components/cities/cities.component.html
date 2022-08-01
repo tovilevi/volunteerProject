@@ -1,0 +1,20 @@
+<!--<form name="frm" #frm="ngForm"
+<select [(ngModel)]="codeSelect" name="select">
+    <option *ngFor="let city of listCities" [value]="city.id"  (click)="show()" >{{city.value}}</option>
+</select>
+</form>
+<select >
+    <option >ruty</option>
+</select>>-->
+<div> 
+<mat-form-field appearance="fill">
+    <mat-label>בחר עיר </mat-label>
+    <mat-select [(ngModel)]="codeSelect" name="select"> 
+      <mat-option *ngFor="let city of listCities" [value]="city.name">
+        {{city.name}}
+       
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="ok()">אישור</button>
+</div>

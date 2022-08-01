@@ -1,0 +1,15 @@
+
+<!--<form novalidate (submit)="login()" >
+    <input  name="idC" [(ngModel)]="idInput" placeholder="הזן מספר זהות"/>
+    <button type="submit">התחבר</button>
+</form>-->
+
+
+<form class="login-form" >
+    <mat-form-field >
+      <mat-label >הזן סיסמת משתמש</mat-label>
+      <input type="password" matInput name="idC" [(ngModel)]="idInput">
+    </mat-form-field >
+    <button mat-button (click)="login()">התחבר</button>
+   
+  </form>

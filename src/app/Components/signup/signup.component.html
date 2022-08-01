@@ -1,0 +1,164 @@
+<!-- 
+<div class="sighnUp-wrap">
+  <h1>הרשמת משתמש חדש</h1>
+
+   <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן סיסמת משתמש אישית</mat-label>
+      <input matInput pattern="[0-9]+" maxlength="20" type="text" [(ngModel)]="user.password" required>
+   
+
+     
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>הזן שם פרטי</mat-label>
+      <input matInput pattern="[ א-ת]+" maxlength="20" type="text" [(ngModel)]="user.firstName" required>
+
+     
+    </mat-form-field>
+  </div>
+  
+  <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן שם משפחה</mat-label>
+      <input matInput pattern="[ א-ת]+" required maxlength="20" type="text" [(ngModel)]="user.lastName">
+   
+    
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר קהילה </mat-label>
+      <mat-select  [(ngModel)]="user.idGroup" name="select">
+        <mat-option *ngFor="let c of listCommunity" [value]="c">
+          {{c.nameCommunities}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    
+  </div> 
+   <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן טלפון</mat-label>
+      <input matInput #phone="ngModel" pattern="05?[0-9]-?[0-9]{7}" required="true" type="tel" [(ngModel)]="user.phon">
+      <mat-error>שדה נדרש</mat-error>
+    
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>הזן כתובת</mat-label>
+      <input matInput #city="ngModel"   required type="city"  name="city"    [(ngModel)]="user.address">
+      <mat-error>שדה נדרש</mat-error>
+   
+    </mat-form-field>
+  </div>
+  <div class="form-fields-wrap">
+
+ <mat-form-field class="form-fields-wrap">
+  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="הזן תאריך לידה">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+    <mat-form-field appearance="fill" >
+      <mat-label>בחר מגדר </mat-label>
+      <mat-select  [(ngModel)]="user.gender" name="select">
+        <mat-option  *ngFor="let g of genderList" [value]="g">
+          {{g}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>בחר סוג משתמש </mat-label>
+    <mat-select  [(ngModel)]="user.userType" name="select">
+      <mat-option *ngFor="let u of listUserType" [value]="u">
+        {{u.nameUserType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button (click)="insert1()">הרשם</button>
+  
+
+</div> -->
+
+<div class="sighnUp-wrap">
+  <h1>הרשמת משתמש חדש</h1>
+<form [formGroup] = "group" (ngSubmit)="onSubmit()">
+   <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן סיסמת משתמש אישית</mat-label>
+      <input matInput pattern="[0-9]+" maxlength="5" maxlength="20" type="text" formControlName="password" required>
+     
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>הזן שם פרטי</mat-label>
+      <input matInput pattern="[ א-ת]+" maxlength="20" type="text" formControlName="firstName" required>
+     
+    </mat-form-field>
+  </div>
+  
+  <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן שם משפחה</mat-label>
+      <input matInput pattern="[ א-ת]+" required maxlength="20" type="text" formControlName="lastName">
+    </mat-form-field>
+   
+    <mat-form-field appearance="fill">
+      <mat-label>בחר קהילה </mat-label>
+      <mat-select  formControlName="idGroup" name="select">
+        <mat-option *ngFor="let c of listCommunity" [value]="c">
+          {{c.nameCommunities}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    
+  </div>
+  <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן טלפון</mat-label>
+      <input matInput  pattern="05?[0-9]-?[0-9]{7}" required="true" type="tel" formControlName="phon">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>הזן עיר </mat-label>
+      <input matInput    required type="city"  name="city"    formControlName="address">
+    </mat-form-field>
+  </div>
+  <div class="form-fields-wrap">
+    <!-- <mat-form-field>
+      <mat-label>הזן תאריך לידה</mat-label>
+      <input matInput pattern="date"  type="date" formControlName="dateOfBirth">
+    </mat-form-field> -->
+    <mat-form-field class="form-fields-wrap">
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="dateOfBirth" placeholder="הזן תאריך לידה">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>בחר מגדר </mat-label>
+      <mat-select  formControlName="gender" name="select">
+        <mat-option  *ngFor="let g of genderList" [value]="g">
+          {{g}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>בחר סוג משתמש </mat-label>
+    <mat-select formControlName="userType" name="select">
+      <mat-option *ngFor="let u of listUserType" [value]="u">
+        {{u.nameUserType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button type="submit" color="warn">הרשם</button>
+  
+  
+</form>
+</div>
+
+

@@ -1,0 +1,175 @@
+<!-- 
+    <table class="tableInst">
+      <thead>
+        <tr >
+            <th>
+            מספר משמרת
+            </th>
+          <th>
+            שם מתנדב
+            </th>
+          <th>
+            שם צריך עזרה
+            </th>
+          <th>
+            סוג התנדבות עזרה
+            </th>
+         <th>
+            זמן משמרת
+            </th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of liserealvolonter"> -->
+            <!-- <td>{{i.num_itnaadvut}}</td>
+             <td>{{checkVolenter(i.Id_volunteer)}}</td>
+             <td>{{checkNeedHelp(i.Id_N_H)}}</td>
+              <td>{{checkvolontering(i.Id_volunteering)}}</td>
+               <td>{{checkday(i.day_r_v)}}</td>
+                <td>{{checkhouers(i.hour_r_v)}}</td> -->
+
+
+
+          
+                <!--              
+
+        </tr>
+      </tbody>
+    </table>
+<table class="tableInst">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ראשון</th>
+      <th>שני</th>
+      <th>שלישי</th>
+      <th>רביעי</th>
+      <th>חמישי</th>
+      <th>שישי</th>
+      <th>שבת</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01:00</td>
+      <td>{{getNishbetzet(1,1)}}</td>
+      <td>{{getNishbetzet(2,1)}}</td>
+      <td>{{getNishbetzet(3,1)}}</td>
+      <td>{{getNishbetzet(4,1)}}</td>
+      <td>{{getNishbetzet(5,1)}}</td>
+      <td>{{getNishbetzet(6,1)}}</td>
+      <td>{{getNishbetzet(7,1)}}</td>
+    </tr>
+    <tr>
+      <td>02:00</td>
+      <td>{{getNishbetzet(1,2)}}</td>
+      <td>{{getNishbetzet(2,2)}}</td>
+      <td>{{getNishbetzet(3,2)}}</td>
+      <td>{{getNishbetzet(4,2)}}</td>
+      <td>{{getNishbetzet(5,2)}}</td>
+      <td>{{getNishbetzet(6,2)}}</td>
+      <td>{{getNishbetzet(7,2)}}</td>
+    </tr>
+    <tr>
+      <td>03:00</td>
+      <td>{{getNishbetzet(1,3)}}</td>
+      <td>{{getNishbetzet(2,3)}}</td>
+      <td>{{getNishbetzet(3,3)}}</td>
+      <td>{{getNishbetzet(4,3)}}</td>
+      <td>{{getNishbetzet(5,3)}}</td>
+      <td>{{getNishbetzet(6,3)}}</td>
+      <td>{{getNishbetzet(7,3)}}</td>
+    </tr>
+    <tr>
+      <td>04:00</td>
+      <td>{{getNishbetzet(1,4)}}</td>
+      <td>{{getNishbetzet(2,4)}}</td>
+      <td>{{getNishbetzet(3,4)}}</td>
+      <td>{{getNishbetzet(4,4)}}</td>
+      <td>{{getNishbetzet(5,4)}}</td>
+      <td>{{getNishbetzet(6,4)}}</td>
+      <td>{{getNishbetzet(7,4)}}</td>
+    </tr>
+    <tr>
+      <td>05:00</td>
+      <td>{{getNishbetzet(1,5)}}</td>
+      <td>{{getNishbetzet(2,5)}}</td>
+      <td>{{getNishbetzet(3,5)}}</td>
+      <td>{{getNishbetzet(4,5)}}</td>
+      <td>{{getNishbetzet(5,5)}}</td>
+      <td>{{getNishbetzet(6,5)}}</td>
+      <td>{{getNishbetzet(7,5)}}</td>
+    </tr>
+    <tr>
+    <td>06:00</td>
+    <td>{{getNishbetzet(1,6)}}</td>
+    <td>{{getNishbetzet(2,6)}}</td>
+    <td>{{getNishbetzet(3,6)}}</td>
+    <td>{{getNishbetzet(4,6)}}</td>
+    <td>{{getNishbetzet(5,6)}}</td>
+    <td>{{getNishbetzet(6,6)}}</td>
+    <td>{{getNishbetzet(7,6)}}</td>
+  </tr>
+  <tr>
+  <td>07:00</td>
+  <td>{{getNishbetzet(1,7)}}</td>
+  <td>{{getNishbetzet(2,7)}}</td>
+  <td>{{getNishbetzet(3,7)}}</td>
+  <td>{{getNishbetzet(4,7)}}</td>
+  <td>{{getNishbetzet(5,7)}}</td>
+  <td>{{getNishbetzet(6,7)}}</td>
+  <td>{{getNishbetzet(7,7)}}</td>
+</tr>
+<tr>
+<td>08:00</td>
+<td>{{getNishbetzet(1,8)}}</td>
+<td>{{getNishbetzet(2,8)}}</td>
+<td>{{getNishbetzet(3,8)}}</td>
+<td>{{getNishbetzet(4,8)}}</td>
+<td>{{getNishbetzet(5,8)}}</td>
+<td>{{getNishbetzet(6,8)}}</td>
+<td>{{getNishbetzet(7,8)}}</td>
+</tr>
+<tr>
+<td>09:00</td>
+<td>{{getNishbetzet(1,9)}}</td>
+<td>{{getNishbetzet(2,9)}}</td>
+<td>{{getNishbetzet(3,9)}}</td>
+<td>{{getNishbetzet(4,9)}}</td>
+<td>{{getNishbetzet(5,9)}}</td>
+<td>{{getNishbetzet(6,9)}}</td>
+<td>{{getNishbetzet(7,9)}}</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>{{getNishbetzet(1,10)}}</td>
+<td>{{getNishbetzet(2,10)}}</td>
+<td>{{getNishbetzet(3,10)}}</td>
+<td>{{getNishbetzet(4,10)}}</td>
+<td>{{getNishbetzet(5,10)}}</td>
+<td>{{getNishbetzet(6,10)}}</td>
+<td>{{getNishbetzet(7,10)}}</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>{{getNishbetzet(1,11)}}</td>
+<td>{{getNishbetzet(2,11)}}</td>
+<td>{{getNishbetzet(3,11)}}</td>
+<td>{{getNishbetzet(4,11)}}</td>
+<td>{{getNishbetzet(5,11)}}</td>
+<td>{{getNishbetzet(6,11)}}</td>
+<td>{{getNishbetzet(7,11)}}</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>{{getNishbetzet(1,12)}}</td>
+<td>{{getNishbetzet(2,12)}}</td>
+<td>{{getNishbetzet(3,12)}}</td>
+<td>{{getNishbetzet(4,12)}}</td>
+<td>{{getNishbetzet(5,12)}}</td>
+<td>{{getNishbetzet(6,12)}}</td>
+<td>{{getNishbetzet(7,12)}}</td>
+</tr>
+  </tbody>
+</table> -->

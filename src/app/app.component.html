@@ -1,0 +1,18 @@
+
+<div id="home-page">
+    <div *ngIf="a" class="logo-wrap">
+      <img src="../assets/logotovi.png">
+    </div>
+    <div class="welcome-text">
+      HandInHand
+    </div>
+    <button mat-button class="big-button" *ngIf="isdisable" (click)="manager()">כניסה כמנהל</button>
+    <button mat-button class="big-button" *ngIf="isdisable" (click)="signup()">עדיין לא נרשמת? הרשם כאן!</button>
+    <button mat-button class="big-button" *ngIf="isdisable" (click)="Entrance()">כניסה</button>
+    
+   
+  </div>
+  
+  <router-outlet></router-outlet>
+  
+  

@@ -1,0 +1,55 @@
+
+<div id="update-nvc-page">
+  <div class="logo-wrap-banner">
+    <img src="../assets/logo.png">
+  </div>
+  <div class="subject-wrap">
+    <h1>מחק פרטי ההתנדבות</h1>
+    <div class="form-fields-wrap">
+      <mat-form-field appearance="fill">
+          <mat-label>מחק התנדבות </mat-label>
+          <mat-select  [(ngModel)]="it">
+            <mat-option *ngFor="let s of listRealvolonteing" [value]="s">
+              {{s.volunteerCode.firstName+s.volunteerCode.lastName}}ל {{s.VolunteeredCode.firstName+s.VolunteeredCode.lastName+s.TypeOfVolunteeringCode.nameTypeOfVolunteering}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+<!--
+    <button mat-button class="inner-button" (click)="bringCon()" >העדפה אישית</button>
+    <div class="form-fields-wrap">
+      <mat-form-field *ngIf="visible" appearance="fill">
+        <mat-label>בחר העדפה אישית</mat-label>
+        <mat-select  [(ngModel)]="code">
+          <mat-option *ngFor="let s of constrain" [value]="s.ID_Constraints"  >
+            {{s.Name_c}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button mat-button class="inner-button" (click)="day()">האם חשוב לך יום?</button>
+    <div class="form-fields-wrap"  *ngIf="boll">
+      <mat-form-field appearance="fill">
+        <mat-label>בחר יום</mat-label>
+        <mat-select  [(ngModel)]="code">
+          <mat-option *ngFor="let s of constraind" [value]="s.ID_Constraints" >
+            {{s.Name_c}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>בחר שעה</mat-label>
+        <mat-select  [(ngModel)]="code">
+          <mat-option *ngFor="let s of constrainh" [value]="s.ID_Constraints" >
+            {{s.Name_c}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  <button mat-button (click)="update()" >עדכן</button>
+  </div>
+</div>
+-->
+<button mat-button (click)="update()" >מחק</button>

@@ -1,0 +1,14 @@
+
+<div id="mitnadev-page">
+    <div class="logo-wrap-banner">
+      <img src="../assets/logo.png">
+    </div>
+    <div class="buttons-wrap">
+      <button mat-button class="big-button" (click)="signup()">הרשם</button>
+      <button mat-button class="big-button" (click)="login()">התחבר</button>
+    </div>
+    <app-login *ngIf="disableL==true"></app-login>
+    <app-signup *ngIf="disableS==true"></app-signup>
+  </div>
+  
+  

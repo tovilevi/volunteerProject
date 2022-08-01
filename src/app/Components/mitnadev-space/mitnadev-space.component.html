@@ -1,0 +1,66 @@
+<div id="mitnadev-space-page">
+  <div class="logo-wrap-banner">
+    <img src="../assets/logotovi.png">
+  </div>
+  <button id="close" mat-button (click)="close()">יציאה</button>
+
+  <div class="buttons-wrap">
+    <h1>שלום {{us.firstName+us.lastName}}</h1>
+    <button mat-button (click)="ghow()">צפייה במערכת השעות</button>
+    <table *ngIf="a">
+      <tr>
+
+        
+        <th> שם צריך עזרה</th>
+        <th> סוג התנדבות עזרה </th>
+        <th> משמרת </th>
+        <th>טלפון מבקש העזרה</th>
+        <th>עיר ההתנדבות</th>
+      </tr>
+
+      <tr *ngFor="let i of listRealvolonteing">
+        
+        <td>{{i.VolunteeredCode.firstName +i.VolunteeredCode.lastName}}</td>
+        <td>{{i.TypeOfVolunteeringCode.nameTypeOfVolunteering}}</td>
+        <td>{{i.volunteerTimeCode.nameVolunteerTime}}</td>
+        <td>{{i.VolunteeredCode.phon}}</td>
+        <td>{{i.VolunteeredCode.address}}</td>
+      </tr>
+    </table>
+    <button mat-button (click)="show()">צפה בפרטים אישיים</button>
+    <table *ngIf="b">
+     <tr>
+       <th>שם</th>
+       <th>משפחה</th>
+       <th>תאריך לידה</th>
+       <th>מין</th>
+       <th>עיר</th>
+       <th>טלפון</th>
+       <th>סוג משתמש</th>
+       <th>קהילה</th>
+       
+     </tr>
+     <tr>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.dateOfBirth| date}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.address}}</td>
+      <td>{{user.phon}}</td>
+      <td>{{user.userType.nameUserType}}</td>
+      <td>{{user.idGroup.nameCommunities}}</td>
+      
+    </tr>
+    
+    </table>
+
+    <button id="a" *ngIf="b" mat-button (click)="upd()" > עדכן</button>
+    <!-- <button mat-button (click)="add()">צפה בכל ההתנדבויות </button> -->
+    <button mat-button (click)="add()">הוסף התנדבות</button>
+    <button mat-button (click)="up()"> מחק התנדבות</button>
+
+
+
+    
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.tableInst{direction: rtl;text-align: center;
+    overflow-y: scroll;
+    margin: auto;
+    padding: 2px;
+    direction: rtl;
+    min-height: 14px;
+    border-radius: 7px;}
+    .tableInst tr {
+        min-height: 14px;
+    }
+
+    .tableInst thead {
+        background-color: #078488;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .tableInst thead th {
+            min-width: 100px;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .tableInst thead th:nth-child(2) {
+                min-width: 90px;
+            }
+
+            .tableInst thead th:last-child {
+                min-width: 140px;
+            }
+
+            .tableInst tbody tr {
+        font-size: 14px;
+        color: #484949;
+    }
+
+    .tableInst tbody tr:nth-child(odd) {
+            background-color: #d1d1d1;
+        }
+
+        .tableInst tbody tr td {
+            height: 40px;
+        }
+
+        .tableInst tbody tr:nth-child(2) {
+            min-width: 90px;
+        }
+
+        .tableInst tbody tr:last-child {
+            min-width: 140px;
+        }
+
+

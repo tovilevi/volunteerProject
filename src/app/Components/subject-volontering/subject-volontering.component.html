@@ -1,0 +1,130 @@
+<!--<button (click)="bringCon()" ></button>
+<mat-form-field appearance="fill">
+    <mat-label>בחר התמדבותה</mat-label>
+    <mat-select  [(ngModel)]="codeSelect">
+      <mat-option *ngFor="let s of lists_s_v" [value]="s.Id_volunteering" >
+        {{s.Name_volunteer}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="bringCon()" >העדפה אישית</button>
+  <mat-form-field *ngIf="visible" appearance="fill">
+    <mat-label>בחר העדפה אישית</mat-label>
+    <mat-select  [(ngModel)]="code">
+      <mat-option *ngFor="let s of constrain" [value]="s.ID_Constraints"  >
+        {{s.Name_c}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="enter()" >הרשם</button>
+  <button (click)="day()">האם חשוב לך יום?</button>
+  <div *ngIf="boll">
+   <mat-form-field appearance="fill">
+    <mat-label>בחר יום</mat-label>
+    <mat-select  [(ngModel)]="code">
+      <mat-option *ngFor="let s of constraind" [value]="s.ID_Constraints" >
+        {{s.Name_c}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+    
+
+  <mat-form-field appearance="fill">
+    
+    <mat-label>בחר שעה</mat-label>
+    <mat-select  [(ngModel)]="code">
+      <mat-option *ngFor="let s of constrainh" [value]="s.ID_Constraints" >
+        {{s.Name_c}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  </div>
+-->
+
+<!--<button (click)="bringCon()" ></button>
+<h1>'בחר עזרה'</h1>
+<select [(ngModel)]="codeSelect" name="select" >
+    <option [value]="s_v.ids_v" *ngFor="let s of lists_s_v" >{{s_v.name}}</option>
+</select>
+-->
+
+<div id="subject-volontering-page">
+  <div class="logo-wrap-banner">
+    <img src="../assets/logo.png">
+  </div>
+  <div class="subject-wrap">
+    <h1>פרטי ההתנדבות</h1>
+    <div class="form-fields-wrap">
+      <mat-form-field appearance="fill">
+        <mat-label>בחר סוג התנדבות</mat-label>
+        <mat-select  [(ngModel)]="typeOfVolunteer">
+          <mat-option *ngFor="let s of listTypeVolunteer" [value]="s" >
+            {{s.nameTypeOfVolunteering}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-fields-wrap">
+      <mat-form-field appearance="fill">
+        <mat-label>בחר משמרת התנדבות</mat-label>
+        <mat-select  [(ngModel)]="shift" name="select">
+          <mat-option *ngFor="let s of listTimeVolunteer" [value]="s" >
+            {{s.nameVolunteerTime}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>האם משנה מגדר המתנדב/מבקש העזרה</mat-label>
+        <mat-select   name="select">
+          <mat-option  *ngFor="let g of genderList" [value]="g">
+            {{g}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+     
+    </div>
+    
+
+    <!-- <button mat-button class="inner-button" (click)="bringCon()" >העדפה אישית</button>
+    <div class="form-fields-wrap" *ngIf="visible">
+      <mat-form-field  appearance="fill">
+        <mat-label>בחר העדפה אישית</mat-label>
+        <mat-select  [(ngModel)]="code">
+          <mat-option *ngFor="let s of constrain" [value]="s.ID_Constraints"  >
+            {{s.Name_c}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button mat-button class="inner-button" (click)="day()">האם חשוב לך יום?</button>
+    <div class="form-fields-wrap"  *ngIf="boll">
+        <mat-form-field appearance="fill">
+          <mat-label>בחר יום</mat-label>
+          <mat-select  [(ngModel)]="code">
+            <mat-option *ngFor="let s of constraind" [value]="s.ID_Constraints" >
+              {{s.Name_c}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>בחר שעה</mat-label>
+          <mat-select  [(ngModel)]="code">
+            <mat-option *ngFor="let s of constrainh" [value]="s.ID_Constraints" >
+              {{s.Name_c}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div> -->
+
+    <button mat-button (click)="enter()" >הרשם</button>
+    <!-- <button mat-button (click)="end()" >סיים רישום</button> -->
+  </div>
+  <br>
+  <!-- <button mat-button (click)="home()" >דף הבית</button> -->
+  <!-- <div *ngIf="ending">
+    <h1>תודה שהצטרפתם אלינו בקרוב תקבל מייל עם פרטי השיבוץ שלך</h1>
+  </div> -->
+</div>
+

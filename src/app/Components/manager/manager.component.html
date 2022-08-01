@@ -1,0 +1,53 @@
+<div id="manager-page">
+    <div class="logo-wrap-banner">
+        <img src="../assets/logotovi.png">
+    </div>
+    <div class="buttons-wrap">
+        <button id="mat" mat-button class="big-button" (click)="shibuz()">צפיה בטבלת השיבוץ</button>
+        <button id="mat" mat-button class="big-button" (click)="init()">שבץ</button>
+    </div>
+    
+    <h1 *ngIf="c">{{b}}</h1>
+    
+    <div *ngIf="a">
+        <table>
+            <tr>
+                
+                    
+                <th> שם מתנדב </th>
+                <th> שם צריך עזרה</th>
+                <th> סוג התנדבות  </th>
+                <th> שעת התנדבות </th>
+                <th> תאריך שיבוץ </th>
+                <th>טלפון מתנדב</th>
+                <th>טלפון מבקש עזרה</th>
+                <th>עיר התנדבות</th>
+                <!-- <th></th> -->
+                
+
+</tr>
+
+            <tr *ngFor="let i of listRealvolonteing">
+                <input #id style="display:none" type="text" value="i.volunteerCode">
+                <!-- <td #id style="display:none">{{i.volunteerCode}}</td> -->
+                <td >{{i.volunteerCode.firstName+i.volunteerCode.lastName}}</td>
+                <td>{{i.VolunteeredCode.firstName+i.VolunteeredCode.lastName}}</td>
+                <td>{{i.TypeOfVolunteeringCode.nameTypeOfVolunteering}}</td>
+                <td>{{i.volunteerTimeCode.nameVolunteerTime}}</td>
+                <td>{{i.dateOfInlay | date }}</td>
+                <td>{{i.volunteerCode.phon}}</td>
+                <td>{{i.VolunteeredCode.phon}}</td>
+                <td>{{i.VolunteeredCode.address}}</td>
+
+                
+                <!-- <button mat-raised-button (click)="openDialog(id.value)">פרטי מתנדב</button>
+                  
+                 
+                <button mat-raised-button (click)="openDialog(id.value)">פרטי מבקש עזרה</button> -->
+            </tr>
+        </table>
+
+       
+    </div>
+    
+</div>

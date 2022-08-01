@@ -1,0 +1,51 @@
+
+<div id="updatem-page">
+    <div class="logo-wrap-banner">
+      <img src="../assets/logo.png">
+    </div>
+    <div class="update-wrap">
+      <h1>עדכון פרטים אישיים</h1>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן מספר זהות</mat-label>
+          <input matInput value="newmitnadev.id" [(ngModel)]="newmitnadev.id">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן שם פרטי</mat-label>
+          <input matInput value="newmitnadev.firstName" [(ngModel)]="newmitnadev.firstName">
+        </mat-form-field>
+      </div>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן שם משפחה</mat-label>
+          <input matInput value="newmitnadev.lastname" [(ngModel)]="newmitnadev.lastname">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן עיר</mat-label>
+          <input matInput value="newmitnadev.city" [(ngModel)]="newmitnadev.city">
+        </mat-form-field>
+      </div>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן טלפון</mat-label>
+          <input matInput value="newmitnadev.tel" [(ngModel)]="newmitnadev.tel">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן כתובת</mat-label>
+          <input matInput value="newmitnadev.address_" [(ngModel)]="newmitnadev.address_" >
+        </mat-form-field>
+      </div>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן מייל</mat-label>
+          <input matInput value="newmitnadev.mail" [(ngModel)]="newmitnadev.mail">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן גיל</mat-label>
+          <input matInput value="newmitnadev.age" [(ngModel)]="newmitnadev.age">
+        </mat-form-field>
+      </div>
+      <button mat-button (click)="update()">עדכן פרטים</button>
+    </div>
+  </div>
+  

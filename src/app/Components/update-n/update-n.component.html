@@ -1,0 +1,140 @@
+
+<div id="update-n-page">
+    <div class="logo-wrap-banner">
+      <img src="../assets/logo.png">
+    </div>
+    <div class="update-wrap">
+      <h1>עדכון פרטים אישיים</h1>
+      <!-- <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן מספר זהות</mat-label>
+          <input matInput value="newNeedHelp.id_N_H" [(ngModel)]="newNeedHelp.id_N_H">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן שם פרטי</mat-label>
+          <input matInput type="text" value="newNeedHelp.firstName" [(ngModel)]="newNeedHelp.firstName">
+        </mat-form-field>
+      </div>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן שם משפחה</mat-label>
+          <input matInput value="newNeedHelp.lastname" [(ngModel)]="newNeedHelp.lastname">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן עיר</mat-label>
+          <mat-select  [(ngModel)]="newNeedHelp.city" name="select">
+            <mat-option *ngFor="let city of listCities" [value]="city.id">
+              {{city.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן טלפון</mat-label>
+          <input matInput value="newNeedHelp.tel" [(ngModel)]="newNeedHelp.tel">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן כתובת</mat-label>
+          <input matInput value="newNeedHelp.address_" [(ngModel)]="newNeedHelp.address_" >
+        </mat-form-field>
+      </div>
+      <div class="form-fields-wrap">
+        <mat-form-field>
+          <mat-label>הזן מייל</mat-label>
+          <input matInput value="newNeedHelp.mail" [(ngModel)]="newNeedHelp.mail">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>הזן גיל</mat-label>
+          <input matInput value="newNeedHelp.age" [(ngModel)]="newNeedHelp.age">
+        </mat-form-field>
+      </div>
+       -->
+      
+
+   <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>עדכן סיסמת משתמש אישית</mat-label>
+      <input matInput pattern="[0-9]+" maxlength="20" type="text" formControlName="password" required>
+     
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>עדכן שם משפחה</mat-label>
+      <input matInput pattern="[ א-ת]+" maxlength="20" type="text" required="true" [(ngModel)]="user.lastName">
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <mat-label>הזן מספר זהות</mat-label>
+      <input matInput pattern="[0-9]+" type="text" [(ngModel)]="mitnadev.id">
+    </mat-form-field> -->
+    <mat-form-field>
+      <mat-label>עדכן שם פרטי</mat-label>
+      <input matInput pattern="[ א-ת]+" maxlength="20" type="text" [(ngModel)]="user.firstName">
+     
+    </mat-form-field>
+  </div>
+  
+  <div class="form-fields-wrap">
+    <mat-form-field appearance="fill">
+    <mat-label>עדכן סוג משתמש-{{user.userType.nameUserType}} </mat-label>
+    <mat-select  [(ngModel)]="user.userType" name="select">
+      <mat-option *ngFor="let u of listUserType" [value]="u">
+        {{u.nameUserType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+    <!-- <input type="text" [(ngModel)]="n" placeholder="הזן שם קהילה"/> -->
+    <mat-form-field appearance="fill">
+      <mat-label>עדכן קהילה-{{user.idGroup.nameCommunities}} </mat-label>
+      <mat-select  [(ngModel)]="user.idGroup" name="select" >
+        <mat-option *ngFor="let c of listCommunity" [value]="c">
+          {{c.nameCommunities}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    
+  </div>
+  <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>עדכן טלפון</mat-label>
+      <input matInput #phone="ngModel" pattern="05?[0-9]-?[0-9]{7}" required type="tel" [(ngModel)]="user.phon">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>עדכן כתובת</mat-label>
+      <input matInput #city="ngModel"   required type="city"  name="city"    [(ngModel)]="user.address">
+    </mat-form-field>
+  </div>
+  <div class="form-fields-wrap">
+    <mat-form-field class="form-fields-wrap">
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" [(ngModel)]="user.dateOfBirth" placeholder="עדכן תאריך לידה">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>עדכן מגדר-{{user.gender}} </mat-label>
+      <mat-select  [(ngModel)]="user.gender" name="select" >
+        <mat-option  *ngFor="let g of genderList" [value]="g">
+          {{g}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+ 
+  <!-- <div class="form-fields-wrap">
+    <mat-form-field>
+      <mat-label>הזן מייל</mat-label>
+      <input matInput pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required type="email" [(ngModel)]="mitnadev.mail">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>הזן גיל</mat-label>
+      <input matInput type="number" [(ngModel)]="mitnadev.age">
+    </mat-form-field>
+  </div> -->
+
+      <button mat-button (click)="update()">עדכן פרטים אישיים</button>
+    </div>
+  </div>
+  
+  
